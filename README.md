@@ -11,7 +11,7 @@ $ sudo apt-get install mariadb
 
 - Clone o repositório utilizando o comando:
 ```shell
-$ git clone git@github.com:Engenharia-de-Software-1-UFMG/Urna-Eletronica.git
+$ git clone https://github.com/Engenharia-de-Software-1-UFMG/Urna-Eletronica.git
 ```
 
 - Entre na pasta do repositório e execute o script para criar o banco:
