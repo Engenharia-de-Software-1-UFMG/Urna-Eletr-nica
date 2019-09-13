@@ -18,7 +18,7 @@ $ git clone https://github.com/Engenharia-de-Software-1-UFMG/Urna-Eletronica.git
 ```shell
 $ mysql -u root < create_db.sql
 ```
-*Obs 1: Esse script remove o banco e o cria novamente, inserindo  alguns dados iniciais.*
+*Obs 1: Esse script remove o banco e o cria novamente.*
 
 *Obs 2: Você pode executar esse script várias vezes, porém perderá os seus dados do banco.*
 
