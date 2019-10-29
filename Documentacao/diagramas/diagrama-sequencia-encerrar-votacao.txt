@@ -1,0 +1,24 @@
+title Encerrar Votação
+
+actor Fiscal Eleitoral
+participant "urna : Urna" as Urna
+database Persistência#steelblue
+actor Juiz Eleitoral
+activate Persistência
+
+loop #2f2e7b #white para cada urna
+activate Urna#DC143C
+activate Fiscal Eleitoral
+Fiscal Eleitoral->Urna:finalizarUrna(Urna)
+Urna->Persistência:gravaUrna()
+Fiscal Eleitoral<<--Urna:finalizada
+deactivate Fiscal Eleitoral
+deactivate Urna
+end
+
+activate Juiz Eleitoral
+Persistência<-Juiz Eleitoral:apurarVotos()
+Persistência-->>Juiz Eleitoral:resultado
+Juiz Eleitoral->Juiz Eleitoral:apresentarResultados()
+
+deactivate Juiz Eleitoral

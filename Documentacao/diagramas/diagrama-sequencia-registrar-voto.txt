@@ -1,0 +1,28 @@
+title Registrar Voto
+
+actor Eleitor
+actor Mesario
+participant Urna#lightgreen
+database Persistência#steelblue
+
+note over Urna:Urna Previamente Inicializada
+
+activate Persistência
+activate Urna
+activate Eleitor
+
+Eleitor->>Mesario:apresenta titulo
+
+deactivate Eleitor
+activate Mesario
+
+Mesario->Eleitor:autorizarVoto()
+
+deactivate Mesario
+activate Eleitor
+
+Eleitor->Urna:realizarVoto()
+Urna->Persistência:gravarVoto()
+Eleitor<<--Urna:confirmação
+
+deactivate Eleitor
