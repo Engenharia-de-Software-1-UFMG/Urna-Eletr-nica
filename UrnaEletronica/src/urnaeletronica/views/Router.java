@@ -6,10 +6,8 @@
 package urnaeletronica.views;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 /**
- * Roteador do aplicativo usado para mudança de views
  *
  * @author Bernardo
  */
@@ -32,7 +30,7 @@ public class Router extends JFrame {
 
     }
 
-    public void goToView(JPanel view) {
+    public void goToView(JFrame view) {
         this.setContentPane(view);
         this.revalidate();
     }
